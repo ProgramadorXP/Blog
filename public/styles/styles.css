@@ -1,0 +1,220 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/*CONTAINER*/
+.container {
+    width: 100%;
+    min-height: 100lvh;
+    padding: 20px 40px;
+    /*background-color: green;*/
+    display: grid;
+    grid-template-rows: 75px 1fr 60px;
+    grid-template-columns: repeat(auto, 1fr);
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+    gap: 40px;
+}
+
+/*HEADER*/
+.header {
+    grid-area: header;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo__text {
+    font-weight: 500;
+}
+
+.nav__list {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.nav__item {
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    font-size: 1.2em;
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: 300ms all ease-in-out;
+}
+
+.nav__link:hover {
+    background-color: rgba(64, 100, 116, 1);
+    color: white;
+}
+
+/*MAIN*/
+.main {
+    grid-area: main;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-areas: "posts form"
+                         "posts form";
+    gap: 20px;
+}
+
+.about-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-contact__title {
+    color: rgb(150, 0, 0);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.about-contact__text {
+    line-height: 20px;
+}
+
+.posts {
+    max-height: 500px;
+    grid-area: posts;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.posts__title {
+    width: fit-content;
+    font-weight: 400;
+    text-align: center;
+}
+
+.container-form {
+    grid-area: form;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(auto, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.form__title {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.posts__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.posts__item {
+    list-style: square;
+}
+
+.post {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post__title {
+    color: rgb(150, 0, 0);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.post__date {
+    font-size: 1.1em;
+}
+
+.post__description {
+    line-height: 20px;
+}
+
+.form__div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form__label {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.form__input {
+    padding: 5px 8px;
+    font-size: 1em;
+    border: 2px solid black;
+    transition: 300ms all ease;
+    outline: none;
+
+}
+
+.form__input:focus {
+    border: 2px solid rgb(56, 56, 255);
+}
+
+.textarea {
+    min-height: 100px;
+    resize: none;
+    
+    font-weight: 100;
+}
+
+.form__button {
+    padding: 4px 10px;
+    background-color: rgb(56, 56, 255);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 300ms all ease-in-out;
+}
+
+.form__button:hover {
+    background-color: rgb(56, 56, 255, 0.8);
+}
+
+/*FOOTER*/
+.footer {
+    grid-area: footer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__text {
+    font-weight: 500;
+    letter-spacing: 1px;
+}

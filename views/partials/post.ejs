@@ -1,0 +1,10 @@
+<section class="posts">
+    <h2 class="posts__title">Posts</h2>
+    <ul class="posts__nav">
+        <% if (locals.posts) { %>
+            <% posts.map((post) => { %>
+                <li class="posts__item"><a href="/post/<%= post.id %>" class="posts__link"><%= post.title%></a></li>
+            <% }) %>
+        <% } %>
+    </ul>
+</section>

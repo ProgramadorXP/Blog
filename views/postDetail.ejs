@@ -1,0 +1,12 @@
+<!--HEADER-->
+<%- include("partials/header.ejs") %>
+    <!--MAIN-->
+    <% if (locals.posts) { %>
+        <div class="post">
+            <h3 class="post__title"><%=  posts.title%></h3>
+            <b class="post__date"><%= date %></b>
+            <p class="post__description"><%=  posts.des%></p>
+        </div>
+    <% } %>
+<!--FOOTER-->
+<%- include("partials/footer.ejs") %>
